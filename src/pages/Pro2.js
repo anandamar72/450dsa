@@ -11,8 +11,11 @@ function Pro2({ data, id }) {
     })();
   }, []);
   const [clicked, setClicked] = useState(false);
-  const questionlength = data.questions.length;
-
+  // const questionlength = data.questions.length;
+ let questionlength =0;
+  if (data && data.questions) {
+    questionlength = data.questions.length;
+  }
   function is_checked(index) {
     let temp = clicked;
     temp = !temp;
@@ -27,6 +30,8 @@ function Pro2({ data, id }) {
   var num = [];
   const lowEnd = 1;
   const highEnd = 61;
+  const topicName = data ? data.topicName : '';
+
   // for (var i = 1; i <= questionlength; i++) {
   //   num.push(0);
   //   list.push(false);
@@ -65,9 +70,9 @@ function Pro2({ data, id }) {
      <div className="flex flex-col items-center justify-center">
   <div className="my-1 w-full max-w-4xl">
     <button class="w-full flex rounded-lg px-4 py-2 border-2 border-blue-500 dark:border-white pl-28 hover:bg-blue-600 hover:text-blue-100 duration-300 text-black text-xl font-semibold dark:text-white text-left   " onClick={() => is_checked()}>
-      <span className="w-100  ">{data.topicName}</span>
+      <span className="w-100  ">{topicName}</span>
       <div className="text-[#000000] flex justify-between ml-auto mr-5 dark:text-white">
-        <p className="">{sum(checkBoxState)}/{data.questions.length}{" "}</p>
+        <p className="">{sum(checkBoxState)}/{questionlength}{" "}</p>
       </div> 
     </button>
      {clicked ? 
