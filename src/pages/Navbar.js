@@ -118,7 +118,7 @@ const Navbar = () => {
       <div  className="xl:invisible" >
         <GithubCorner
           size={63}
-          href="https://github.com/anandamar72/lop/tree/master"
+          href="https://github.com/anandamar72/450dsa"
           target="__blank"
         />
       </div>
