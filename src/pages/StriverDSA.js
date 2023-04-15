@@ -1,11 +1,21 @@
 import Navbar from "./Navbar"
 import Pro2 from "./Pro2";
 import data from "../StriverDSAData";
-
+import Head from "next/head";
 
 const StriverDSA = () => {
   return (
     <>
+     
+    <Head>
+      <title>A TO Z SDE Sheet by Striver</title>
+      <meta
+        name="description"
+        content="A TO Z SDE Sheet by Striver"
+      />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+
         <div>
       <div className="w-full h-full dark:bg-[#18191A]  mt-16 ">
         <Navbar />

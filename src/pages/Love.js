@@ -1,5 +1,6 @@
 import Navbar from "./Navbar";
 import Pro from "./Pro";
+import  Head from "next/head";
 
 // Import the 450DSAFinal.js file here
 import data from "../450DSAFinal.js";
@@ -7,6 +8,19 @@ import data from "../450DSAFinal.js";
 const Love = () => {
   return (
     <>
+        
+    <Head>
+      <title>450 DSA Sheet by Love Babbar</title>
+      <meta
+        name="description"
+        content="450 DSA Sheet by Love Babbar"
+      />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+
+
+
+    
     <div>
       <div className="w-full h-full dark:bg-[#18191A]  mt-16 ">
         <Navbar />

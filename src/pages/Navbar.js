@@ -6,10 +6,14 @@ import { useRouter } from "next/router";
 import Hamburger from "hamburger-react";
 import GithubCorner from "react-github-corner";
  
+ 
 
 
 
 const Navbar = () => {
+ 
+   
+
   const router = useRouter();
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -28,6 +32,8 @@ const Navbar = () => {
   };
 
   return (
+    <>
+      
     <div className=" absolute  w-full h-16  shadow-md  top-0 flex  items-center z-100  dark:bg-[#242526]  ">
       {/*  Hamburger Menu */}
 
@@ -123,7 +129,10 @@ const Navbar = () => {
         />
       </div>
     </div>
+    </>
   );
+
 };
+
 
 export default Navbar;
